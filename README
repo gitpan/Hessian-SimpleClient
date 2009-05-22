@@ -1,0 +1,50 @@
+Hessian-SimpleClient
+
+A Hessian Client for perl.
+Currently, Hessian 1.0 is supported;
+Hessian 2.0 is also tested to work, although specification is still "draft";
+
+With little dependencies, it should be easy to install;
+Also you may want to write a wrapper to suit your need;
+
+Also a hessian service is needed if you want to test this module;
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Hessian::SimpleClient
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Hessian-SimpleClient
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Hessian-SimpleClient
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Hessian-SimpleClient
+
+    Search CPAN
+        http://search.cpan.org/dist/Hessian-SimpleClient
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2009 du ling
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
