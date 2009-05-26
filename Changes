@@ -6,4 +6,6 @@ Revision history for Hessian-SimpleClient
         fix reading of compact binary, in hessian 2.0
 0.03    Fri May 22 15:12:19 UTC 2009
         rename to Hessian-SimpleClient (collision)
+0.04    Tue May 26 15:25:34 UTC 2009
+        rename in t/ scripts
 

@@ -49,10 +49,10 @@ TODO: {
   );
 
   module_boilerplate_ok('lib/Hessian/SimpleClient.pm');
-  module_boilerplate_ok('lib/Hessian/Translator.pm');
+  module_boilerplate_ok('lib/Hessian/Converter.pm');
   module_boilerplate_ok('lib/Hessian/Type.pm');
-  module_boilerplate_ok('lib/Hessian/Translator/V1.pm');
-  module_boilerplate_ok('lib/Hessian/Translator/V2.pm');
+  module_boilerplate_ok('lib/Hessian/Converter/V1.pm');
+  module_boilerplate_ok('lib/Hessian/Converter/V2.pm');
 
 
 }

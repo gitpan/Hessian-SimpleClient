@@ -277,20 +277,6 @@ sub writeClass {
             ? pack('C',($#$cdar + 0x60))
             : ('O' . ($self->writeInt($#$cdar)))
           );
-=comment
-    }elsif('REF' eq ref $x){
-        $x = $$x;
-        die "REF to Hessian::Class needed $x" unless 'Hessian::Class' eq ref $x;
-        die "Class def ref found before class def list populated $x" unless $#$cdar >= 0;
-        for(my $j = 0; $j <= $#$cdar; $j++){
-            if($cdar->[$j] == $x){
-                return $j < 16
-                ? pack('C',($#$cdar + 0x60))
-                : ('O' . ($self->writeInt($#$cdar)));
-            }
-        }
-        die "Class def ref not found in def list";
-=cut
     }else{
         die "unknown class type $x:", ref $x;
     }
