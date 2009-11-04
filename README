@@ -2,7 +2,7 @@ Hessian-SimpleClient
 
 A Hessian Client for perl.
 Currently, Hessian 1.0 is supported;
-Hessian 2.0 is also tested to work, although specification is still "draft";
+Hessian 2.0 is also tested to work;
 
 With little dependencies, it should be easy to install;
 Also you may want to write a wrapper to suit your need;

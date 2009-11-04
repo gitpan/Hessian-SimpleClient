@@ -25,7 +25,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS
@@ -281,7 +281,8 @@ sub read_chunks {
         $type = substr $x,$i,1;
         die "chunk not recognized($i)" unless $type =~ /^[SsXxBb]/;
         my $buf;
-        ($buf,$i) = $self->read_string($x,$i+1);
+        ($buf,$i) = $self->read_string($x,$i+1) if($type =~ /^[SsXx]/);
+        ($buf,$i) = $self->read_binary($x,$i+1) if($type =~ /^[Bb]/);
         $data .= $buf;
     }while($type =~ /[sxb]/);
 
@@ -300,6 +301,12 @@ sub read_string { # get a string at pos. $i
     my($self, $x, $i) = @_;
     my $len = unpack('n', substr($x,$i,2) );
     return substr($x, $i+2, $len), $i+$len+2;
+}
+sub read_binary { # get a string at pos. $i 
+    my($self, $x, $i) = @_;
+    my $len = unpack('n', substr($x,$i,2) );
+    my $buf = substr $x, $i+2, $len;
+    return $buf, $i+2+$len;
 }
 
 =head2 read_map
