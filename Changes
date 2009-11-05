@@ -10,3 +10,5 @@ Revision history for Hessian-SimpleClient
         rename in t/ scripts
 0.05    Wed Nov  4 21:03:56 UTC 2009
         add pre-requisite to pass automated tests, unicode bug in V1
+0.06    Thu Nov  5 15:29:03 UTC 2009
+        add pod for new routine read_binary, to pass test

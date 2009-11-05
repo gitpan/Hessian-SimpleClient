@@ -14,6 +14,7 @@ my $builder = Module::Build->new(
         'Unicode::String' => 0,
         'LWP::UserAgent'  => 0,
         'DateTime'        => 0,
+        'Config'          => 0,
     },
     add_to_cleanup      => [ 'Hessian-SimpleClient-*' ],
     create_makefile_pl => 'traditional',

@@ -25,8 +25,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.02';
-
+our $VERSION='0.01';
 
 =head1 SYNOPSIS
 
@@ -302,6 +301,11 @@ sub read_string { # get a string at pos. $i
     my $len = unpack('n', substr($x,$i,2) );
     return substr($x, $i+2, $len), $i+$len+2;
 }
+
+=head2 read_binary
+
+=cut
+
 sub read_binary { # get a string at pos. $i 
     my($self, $x, $i) = @_;
     my $len = unpack('n', substr($x,$i,2) );
